@@ -1,0 +1,17 @@
+\# Set default values for all following accounts
+defaults
+auth           on
+tls            on
+tls_trust_file /etc/ssl/certs/ca-certificates.crt
+logfile        \~/.msmtp.log
+
+\# Gmail configuration
+account        gmail
+host           smtp.gmail.com
+port           587
+from           your_email@gmail.com
+user           your_email@gmail.com
+password       your_app_specific_password_or_oauth_token
+#here you have to enable 2FA in google account
+\# Set a default account
+account default : gmail

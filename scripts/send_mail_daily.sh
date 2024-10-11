@@ -11,3 +11,12 @@ from="Your_Email_id@gmail.com"
 
 #sending mail using msmtp
 echo -e "To: $to\nFrom: $from\nSubject: $subject\n\n$body" | msmtp --from=default -t
+
+
+#then after this you have to set cronjob to your terminal/command prompt as
+#crontab -e 
+#you may ask for choose editor if it's for first time (vim, nano etc..)
+#add "0 8 * * * /path/to/send_quote.sh" this path in crontab
+#and path of your file. then Save and exit.
+#Check if the Cron Job is Set Up
+# " crontab -l "
